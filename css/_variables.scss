@@ -1,0 +1,16 @@
+$light:#fff;
+$dark:#3a3a3a;
+$light-pink:#ffc5d4;
+$pink:#ffa6b9;
+$blue:#a9deff;
+$gradient:linear-gradient(135deg,$light-pink,75%,$blue);
+$CD-gradient:linear-gradient(135deg,$light-pink,50%,$blue);
+$button-gradient:linear-gradient(45deg,$blue,12.5%,$light-pink,50%,$blue,75%,$light-pink);
+
+$nav-size:130px;
+$logo-size:190px;
+$footer-size:80px;
+
+$shadow: 5px 5px 5px rgba($color: #000,$alpha: .1);
+$twilight: 1px 2px 10px rgba($color: #fff,$alpha: .8);
+$color-trans:background-color .3s, color .3s;

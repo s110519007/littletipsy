@@ -1,0 +1,298 @@
+@import 'variables';
+::selection{
+    background-color: transparent;
+}
+.text-dark{
+    color: $dark !important;
+}
+.bg-dark{
+    background-color: $dark !important;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    color: $light;
+    font-family: 'Microsoft JhengHei';
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    transition: $color-trans;
+}
+a{
+    text-decoration: none;
+    color: $light;
+}
+.container{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $light;
+    background-size: contain;
+    color: $light;
+    $around_ani:around linear infinite;
+    transition: $color-trans;
+     .bg{
+        position: fixed;
+        top: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .circle_wrap{
+            .circle{
+                position: absolute;
+                border-radius: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transform-origin: 50% 50%;
+            }
+            // 不同尺寸、動畫時間
+            @mixin circles {
+                $circles-pc:"xs" 4vw 2.5s,"s" 6vw 4s,"m" 10.5vw 4.5s,"l" 18vw 6s,"xl" 24vw 8s;
+                @each $size-name,$size,$time in $circles-pc {
+                    .#{$size-name}{
+                        width: $size;
+                        height: $size;
+                        animation: bg_move_#{$size-name} $time ease-in-out infinite alternate !important;
+                    }
+                }
+            }
+            @include circles();
+            .bg_left{
+                .circle1{
+                    left: -2vw;
+                    top: 15.5%;
+                    background-color: rgba($color: $blue, $alpha: .2);
+                }
+                .circle2{
+                    left: 2%;
+                    top: 18%;
+                    background-image: url(../img/SVG/bg_circle.svg);
+                }
+                .circle3{
+                    left: 20%;
+                    top: 51%;
+                    background-color: rgba($color: $pink, $alpha: .2);
+                }
+                .circle4{
+                    left: -3vw;
+                    top: 64%;
+                    background-image: url(../img/SVG/bg_circle.svg);
+                }
+                .circle5{
+                    left: 5%;
+                    top: 76%;
+                    background-color: rgba($color: $blue, $alpha: .2);
+                }
+                .circle6{
+                    left: 12%;
+                    top: 73%;
+                    background-image: url(../img/SVG/bg_circle.svg);
+                    transform: rotate(90deg);
+                }
+            }
+            .bg_right{
+                .circle1{
+                    right: -2%;
+                    top: -5%;
+                    background-image: url(../img/SVG/bg_circle.svg);
+                }
+                .circle2{
+                    right: 23%;
+                    top: 16.5%;
+                    background-color: rgba($color: $pink, $alpha: .2);
+                }
+                .circle3{
+                    right: 7%;
+                    top: 28%;
+                    background-image: url(../img/SVG/bg_circle.svg);
+                    transform: rotate(-90deg);
+                }
+                .circle4{
+                    right: 24%;
+                    top: 61%;
+                    background-color: rgba($color: $blue, $alpha: .2);
+                }
+                .circle5{
+                    right: 1%;
+                    top: 70%;
+                    background-image: url(../img/SVG/bg_circle.svg);
+                    transform: rotate(-135deg);
+                }
+                .circle6{
+                    right: 14%;
+                    top: 86%;
+                    background-color: rgba($color: $pink, $alpha: .2);
+                    transform: rotate(90deg);
+                }
+            }
+            @keyframes bg_move_xs {
+                0%{
+                    transform: translate(0) rotate(0);
+                }
+                100%{
+                    transform: translate(50%,50%) rotate(360deg);
+                }
+            }
+            @keyframes bg_move_s {
+                0%{
+                    transform: translate(0) rotate(0);
+                }
+                100%{
+                    transform: translate(-50%,50%) rotate(360deg);
+                }
+            }
+            @keyframes bg_move_m {
+                0%{
+                    transform: translate(0) rotate(0);
+                }
+                100%{
+                    transform: translate(25%,-25%) rotate(360deg);
+                }
+            }
+            @keyframes bg_move_l {
+                0%{
+                    transform: translate(0) rotate(0);
+                }
+                100%{
+                    transform: translate(-25%,-25%) rotate(360deg);
+                }
+            }
+            @keyframes bg_move_xl {
+                0%{
+                    transform: translate(0) rotate(0);
+                }
+                100%{
+                    transform: translate(25%,-10%) rotate(360deg);
+                }
+            }
+        }
+    }
+    nav{
+        position: fixed;
+        display: flex;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $nav-size;
+        background: $gradient;
+        z-index: 10;
+        overflow: hidden;
+        .logo{
+            cursor: pointer;
+            margin-left: 7.5%;
+            margin-top: ($nav-size -$logo-size)/2;
+            width: $logo-size;
+            height: $logo-size;
+            background-color: $light;
+            border-radius: 100%;
+            background-image: url(../img/SVG/logo.svg);
+            background-repeat: no-repeat;
+            background-size: 150px;
+            background-position: center;
+            transition: $color-trans,background-size .3s,box-shadow .3s;
+            &:hover{
+                background-size: 1.1*150px;
+                box-shadow: inset -5px 10px 5px rgba($color: #000, $alpha: .2);
+            }
+        }
+        .mode{
+            cursor: pointer;
+            margin-left: 1%;
+            margin-top: $nav-size;
+            transform: translateY(-1.6em);
+            font-size: 0.6em;
+            opacity: .5;
+            transition: opacity .3s;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        .nav-link_wrap{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            .nav-link{
+                cursor: pointer;
+                margin: auto 20px;
+                padding: 15px 40px;
+                font-size: 1em;
+                border-radius: 40px/50%;
+                outline: none;
+                transition: $color-trans;
+            }
+            .nav-light{
+                &:hover{
+                    background-color: $light;
+                    color: $light-pink;
+                }
+            }
+            .nav-dark{
+                &:hover{
+                    background-color: $dark;
+                    color: $light-pink;
+                }
+            }
+            .focus{
+                background-color: $light;
+                color: $light-pink;
+            }
+        }
+        .nav-cover,.ham{
+            display: none;
+        }
+    }
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: $footer-size;
+        background: $gradient;
+        overflow: hidden;
+        .WB{
+            cursor: default;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            span{
+                font-size: 1.2em;
+                height: $footer-size;
+                line-height: $footer-size;
+                opacity: .5;
+            }
+            .W{
+                margin-right: 400px;
+            }
+        }
+        .copyright{
+            margin: auto;
+            width: 100%;
+            font-size: .4em;
+            line-height: $footer-size/2;
+            font-weight: normal;
+        }
+        .design{
+            cursor: default;
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+            font-size: .3em;
+            opacity: .3;
+            font-weight: normal;
+            transition: opacity .3s;
+            &:hover{
+                opacity: .6;
+            }
+        }
+    }
+}

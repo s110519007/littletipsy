@@ -1,0 +1,238 @@
+@import 'variables';
+$cover:"pc" 450px,"pad" 45vh,"widephone" 66vw,"phone" 70vw;
+$button:"pc" 450px/3*2,"pad" 45vh/3*2,"widephone" 66vw/3*2,"phone" 70vw/3*2;
+@each $device,$cover-size in $cover {
+    .#{$device}-cover{
+        width: $cover-size;
+        height: $cover-size*1.2;
+        .cover{
+            background-size: $cover-size*.95;
+        }
+        .CD{
+            margin-top: $cover-size*.1;
+            margin-left: $cover-size*.25;
+            width: $cover-size;
+            height: $cover-size;
+            &:hover{
+                cursor: pointer;
+                transform: translateX($cover-size*.1);
+            }
+        }
+        .CD_show{
+            margin-top: $cover-size*.1;
+            margin-left: $cover-size*.25;
+            width: $cover-size;
+            height: $cover-size;
+            transform: translateX(-$cover-size*.25);
+            &:hover{
+                cursor: pointer;
+                transform: translateX(-$cover-size*.25) scale(1.05);
+            }
+        }
+    }
+    .pad-cover{
+        .CD{
+            &:hover{
+                transform: translateX(0);
+            }
+        }
+        .CD_show{
+            &:hover{
+                transform: translateX(-$cover-size*.25);
+            }
+        }
+    }
+    .phone-cover{
+        .CD{
+            margin-left: $cover-size*.15;
+            &:hover{
+                transform: translateX(0);
+            }
+        }
+        .CD_show{
+            transform: translateX(-$cover-size*.15);
+            &:hover{
+                transform: translateX(-$cover-size*.15);
+            }
+        }
+    }
+}
+@each $device,$button-size in $button {
+    .#{$device}-btn{
+        margin: $button-size/8 auto;
+        width: $button-size;
+        height: $button-size*.3;
+        &::after{
+            line-height: $button-size*.3;
+        }
+    }
+}
+.container{
+    article{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        .article_wrap{
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-56%);
+            z-index: 1;
+            .cover_wrap{
+                position: relative;
+                margin: 0 auto;
+                .cover{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: $shadow;
+                    background: url(../img/SVG/cover.svg) center center no-repeat;
+                    background-color: $light;
+                    background-size: 95% 95%;
+                    z-index: 1;
+                    transition: $color-trans,transform 1s;
+                    transform-origin: 0 50%;
+                }
+                .CD{
+                    position: absolute;
+                    border-radius: 100%;
+                    background: $CD-gradient;
+                    box-shadow: $shadow;
+                    z-index: 0;
+                    transition: transform 1s;
+                    overflow: hidden;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: url(../img/SVG/CD.svg) no-repeat;
+                        animation: CD 5s ease-in-out infinite;
+                    }
+                    .CD_list_wrap{
+                        position: absolute;
+                        top: 65%;
+                        width: inherit;
+                        height: inherit;
+                        border-radius: inherit;
+                        z-index: 1;
+                        opacity: 0;
+                        transition: opacity .3s;
+                        animation: CD_list 20s ease-in-out infinite reverse;
+                        .CD_list{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            font-size: 1.2em;
+                        }
+                        .CD_list:nth-child(1){
+                            top: -2.5em;
+                        }
+                        .CD_list:nth-child(2){
+                            left: 2.5em;
+                        }
+                        .CD_list:nth-child(3){
+                            bottom: -2.5em;
+                        }
+                        .CD_list:nth-child(4){
+                            left: -2.5em;
+                        }
+                        @for $list from 1 to 5 {
+                            .CD_list:nth-child(#{$list}){
+                                transform: rotate((-1+$list)*90deg);
+                            }
+                        }
+                    }
+                }
+                @keyframes CD {
+                    0%{
+                        transform: rotate(0);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
+                @keyframes CD_list {
+                    0%{
+                        transform: rotate(0);
+                    }
+                    25%{
+                        transform: rotate(90deg);
+                    }
+                    50%{
+                        transform: rotate(180deg);
+                    }
+                    75%{
+                        transform: rotate(270deg);
+                    }
+                    100%{
+                        transform: rotate(360deg);
+                    }
+                }
+                .CD_show{
+                    position: absolute;
+                    border-radius: 100%;
+                    background: $CD-gradient;
+                    box-shadow: $shadow;
+                    z-index: 0;
+                    transition: transform 1s;
+                    .CD_list_wrap{
+                        opacity: 1;
+                    }
+                }
+            }
+            .button{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 30%/100%;
+                box-shadow: $shadow;
+                overflow: hidden;
+                transition: text-shadow .3s;
+                &::before{
+                    content:'';
+                    position: absolute;
+                    left: 0;
+                    width: 400%;
+                    height: 100%;
+                    background: $button-gradient;
+                    background-size: contain;
+                }
+                &::after{
+                    content:'收聽Podcast';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1em;
+                }
+                &:hover{
+                    text-shadow: $twilight;
+                    &::before{
+                        animation: button 3s ease-in-out infinite;
+                    }
+                }
+                @keyframes button {
+                    0%{
+                        transform: translateX(0);
+                    }
+                    100%{
+                        transform: translateX(-65%);
+                    }
+                }
+            }
+            .text-dark{
+                &:hover{
+                    text-shadow: 1px 2px 10px rgba($color: $dark,$alpha: .5);
+                }
+            }
+        }
+    }
+}
