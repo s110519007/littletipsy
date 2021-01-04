@@ -20,6 +20,7 @@ body{
     font-size: 36px;
     text-align: center;
     transition: $color-trans;
+    -webkit-tap-highlight-color: transparent;
 }
 a{
     text-decoration: none;

@@ -444,16 +444,15 @@
     margin-right: 78vw;
   }
   .container footer .copyright {
-    line-height: 25px;
+    line-height: 20px;
     letter-spacing: -.8px;
   }
   .container footer .design {
-    top: 0;
     left: 50%;
+    bottom: 0;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     opacity: .1;
-    line-height: 50px;
   }
   .container footer .design:hover {
     opacity: .1;
@@ -466,10 +465,10 @@
 @media screen and (max-width: 319px) {
   .container footer .WB span {
     font-size: 1.2em;
-    line-height: 40px;
+    line-height: 16.66667px;
   }
   .container footer .WB .W {
-    margin-right: 80vw;
+    margin-right: 68vw;
   }
   .container footer .copyright {
     letter-spacing: -1px;

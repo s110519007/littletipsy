@@ -392,15 +392,14 @@
                 }
             }
             .copyright{
-                line-height: $footer-size/2;
+                line-height: $footer-size/2.5;
                 letter-spacing: -.8px;
             }
             .design{
-                top: 0;
                 left: 50%;
+                bottom: 0;
                 transform: translateX(-50%);
                 opacity: .1;
-                line-height: $footer-size;
                 &:hover{
                     opacity: .1;
                 }
@@ -413,15 +412,16 @@
 }
 //xs phone
 @media screen and (max-width:319px){
+    $footer-size:50px;
     .container{
         footer{
             .WB{
                 span{
                     font-size: 1.2em;
-                    line-height: $footer-size/2;
+                    line-height: $footer-size/3;
                 }
                 .W{
-                    margin-right: 80vw;
+                    margin-right: 68vw;
                 }
             }
             .copyright{
