@@ -393,7 +393,6 @@
             }
             .copyright{
                 line-height: $footer-size/2.5;
-                letter-spacing: -.8px;
             }
             .design{
                 left: 50%;
@@ -411,7 +410,7 @@
     }
 }
 //xs phone
-@media screen and (max-width:319px){
+@media screen and (max-width:320px){
     $footer-size:50px;
     .container{
         footer{
@@ -421,11 +420,11 @@
                     line-height: $footer-size/3;
                 }
                 .W{
-                    margin-right: 68vw;
+                    margin-right: 210px;
                 }
             }
             .copyright{
-                letter-spacing: -1px;
+                letter-spacing: -.5px;
             }
         }    
     }

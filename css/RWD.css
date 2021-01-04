@@ -445,7 +445,6 @@
   }
   .container footer .copyright {
     line-height: 20px;
-    letter-spacing: -.8px;
   }
   .container footer .design {
     left: 50%;
@@ -462,16 +461,16 @@
   }
 }
 
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 320px) {
   .container footer .WB span {
     font-size: 1.2em;
     line-height: 16.66667px;
   }
   .container footer .WB .W {
-    margin-right: 68vw;
+    margin-right: 210px;
   }
   .container footer .copyright {
-    letter-spacing: -1px;
+    letter-spacing: -.5px;
   }
 }
 /*# sourceMappingURL=RWD.css.map */
