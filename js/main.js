@@ -103,6 +103,8 @@ function clearFocus() {
 //內容rwd
 function contentResize() {
     var w =$(window).width();
+    var h =$(window).height();
+    $("body").css('height',h);
     if (w>1024) {
         $('.circle').addClass('pc');
         $('.circle').removeClass('pad phone');
