@@ -12,37 +12,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="bg">
-            <div class="circle_wrap">
-                <div class="bg_left">
-                    <div class="circle circle1 xs"></div>
-                    <div class="circle circle2 xl"></div>
-                    <div class="circle circle3 m"></div>
-                    <div class="circle circle4 m"></div>
-                    <div class="circle circle5 s"></div>
-                    <div class="circle circle6 l"></div>
-                </div>
-                <div class="bg_right">
-                    <div class="circle circle1 l"></div>
-                    <div class="circle circle2 s"></div>
-                    <div class="circle circle3 xl"></div>
-                    <div class="circle circle4 m"></div>
-                    <div class="circle circle5 m"></div>
-                    <div class="circle circle6 xs"></div>
-                </div>
-            </div>
-        </div>
-        <nav>
-            <div class="logo"></div>
-            <div class="mode">深色模式</div>
-            <div class="nav-cover"></div>
-            <div class="ham"></div>
-            <div class="nav-link_wrap">
-                <div class="nav-link" tabindex="0">首頁</div>
-                <div class="nav-link" tabindex="-1">微暈測驗</div>
-                <div class="nav-link" tabindex="-1">關於我們</div>
-            </div>
-        </nav>
+        <div w3-include-html="common.html"></div>
         <article>
             <div id="index" class="article_wrap">
                 <div class="cover_wrap">
@@ -77,18 +47,10 @@
                 敬請期待
             </div>
         </article>
-        <footer>
-            <div class="WB">
-                <span class="W">W</span>
-                <span class="B">B</span>
-            </div>
-            <div class="copyright">版權所有© 微暈 2020</div>
-            <div class="copyright">Copyright © 2020 LITTLE TIPSY. All rights reserved.</div>
-            <div class="design">design by tyh_0910</div>
-        </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.w3schools.com/lib/w3.js"></script>
     <script src="js/main.js"></script>
+    <script>includeHTML();</script>
 </body>
 </html>
