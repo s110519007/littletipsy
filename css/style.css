@@ -6,6 +6,19 @@
   background-color: transparent;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ffc5d4, 75%, #a9deff);
+  border-radius: 4px;
+}
+
 .text-dark {
   color: #3a3a3a !important;
 }
@@ -15,6 +28,7 @@
 }
 
 body {
+  cursor: default;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -28,11 +42,54 @@ body {
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+}
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+  color: #ffa6b9;
+}
+
+textarea::-moz-selection {
+  background-color: #d3eeff;
+}
+
+textarea::selection {
+  background-color: #d3eeff;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #ffc5d4;
+}
+
+textarea:-ms-input-placeholder {
+  color: #ffc5d4;
+}
+
+textarea::-ms-input-placeholder {
+  color: #ffc5d4;
+}
+
+textarea::placeholder {
+  color: #ffc5d4;
 }
 
 .container {
@@ -44,8 +101,8 @@ a {
   background-color: #fff;
   background-size: contain;
   color: #fff;
-  -webkit-transition: background-color 0.3s, color 0.3s;
-  transition: background-color 0.3s, color 0.3s;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
 }
 
 .container .bg {

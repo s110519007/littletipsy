@@ -71,15 +71,13 @@ $button:"pc" 450px/3*2,"pad" 45vh/3*2,"widephone" 66vw/3*2,"phone" 70vw/3*2;
     article{
         position: relative;
         width: 100%;
+        min-height: 100vh;
         margin: 0;
         padding: 0;
-        overflow: hidden;
         .article_wrap{
             position: absolute;
             width: 100%;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%,-56%);
+            top: $nav-size+25px;
             z-index: 1;
             .cover_wrap{
                 position: relative;

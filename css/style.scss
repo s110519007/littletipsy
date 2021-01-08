@@ -2,6 +2,16 @@
 ::selection{
     background-color: transparent;
 }
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: $gradient;
+    border-radius: 4px;
+}
 .text-dark{
     color: $dark !important;
 }
@@ -9,6 +19,7 @@
     background-color: $dark !important;
 }
 body{
+    cursor: default;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -21,10 +32,29 @@ body{
     text-align: center;
     transition: $color-trans;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 a{
     text-decoration: none;
     color: $light;
+}
+input{
+    appearance: none;
+    outline: none;
+    border: none;
+}
+textarea{
+    resize: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: $pink;
+    &::selection{
+        background-color: $light-blue;
+    }
+    &::placeholder{
+        color: $light-pink;
+    }
 }
 .container{
     margin: 0;
@@ -36,7 +66,7 @@ a{
     background-size: contain;
     color: $light;
     $around_ani:around linear infinite;
-    transition: $color-trans;
+    transition: background-color .3s;
      .bg{
         position: fixed;
         top: 0;

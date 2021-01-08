@@ -5,19 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/test.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/test.css">
     <link rel="stylesheet" href="css/RWD.css">
     <title>微暈勒戒所</title>
-    <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous">
-    </script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
+    <script>  
+        $(function(){ 
+            $("#common").load("common.html");  
+            $("#test").load("test.html");  
+        }); 
+    </script>  
 </head>
 <body>
     <div class="container">
-        <!--#include file="common.html" -->
+        <div id="common"></div>
         <article>
             <div id="index" class="article_wrap">
                 <div class="cover_wrap">
@@ -45,14 +47,16 @@
                 </div>
                 <a href=""><div class="button"></div></a>
             </div>
-            <div id="test" class="article_wrap">
-                敬請期待
-            </div>
-            <div id="about" class="article_wrap">
-                敬請期待
-            </div>
+            <div id="test" class="article_wrap"></div>
+            <div id="about" class="article_wrap">敬請期待</div>
         </article>
     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>

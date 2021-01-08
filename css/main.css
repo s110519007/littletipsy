@@ -306,18 +306,15 @@
 .container article {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 
 .container article .article_wrap {
   position: absolute;
   width: 100%;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -56%);
-          transform: translate(-50%, -56%);
+  top: 155px;
   z-index: 1;
 }
 
