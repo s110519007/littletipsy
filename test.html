@@ -1,9 +1,6 @@
 <div class="test">
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
     <div class="cardAll">
-      <div class="card card1">
+      <div class="card card1" id="card1">
         <div class="card-body">
           <div class="title">
               想知道自己到底<span>暈船</span>了嗎？<br>
@@ -41,10 +38,10 @@
           </div>
         </div>
         <div class="card-footer">
-          <div class="btn btn-next">下一頁</div>
+          <div class="btn-page btn-next">下一頁</div>
         </div>
       </div>
-      <div class="card card2">
+      <div class="card card2" id="card2">
         <div class="card-body">
           <div class="title">
             想知道自己到底<span>暈船</span>了嗎？<br>
@@ -65,13 +62,55 @@
               <label class="form-check-label" for="defaultCheck1">不不不！他明明就超醜！</label>
             </div>
           </div>
+          <div class="question">
+            <label for="">4.你是否覺得他超帥/超美？</label> 
+            <div class="answer">
+                <input class="form-check-input" type="radio" name="Q4" value="yes">
+                <label class="form-check-label" for="defaultCheck1">沒錯他超帥/超美，你怎麼知道！</label>
+            </div>
+            <div class="answer">
+                <input class="form-check-input" type="radio" name="Q4" value="soso">
+                <label class="form-check-label" for="defaultCheck1">才沒有勒，頂多就普普而已吧！</label>
+            </div>
+            <div class="answer">
+              <input class="form-check-input" type="radio" name="Q4" value="no">
+              <label class="form-check-label" for="defaultCheck1">不不不！他明明就超醜！</label>
+            </div>
+          </div>
         </div>
         <div class="card-footer">
-          <div class="btn btn-prev">上一頁</div>
-          <div class="btn btn-next">下一頁</div>
+          <div class="btn-page btn-prev">上一頁</div>
+          <div class="btn-page btn-next">下一頁</div>
         </div>
       </div>
-        <div class="card card3">
+      <div class="card card3" id="card3">
+        <div class="card-body">
+          <div class="title">
+            想知道自己到底<span>暈船</span>了嗎？<br>
+            讓我們一起來檢視看看吧！ 
+          </div>
+          <div class="question">
+            <label for="">5.你是否覺得他超帥/超美？</label> 
+            <div class="answer">
+                <input class="form-check-input" type="radio" name="Q5" value="yes">
+                <label class="form-check-label" for="defaultCheck1">沒錯他超帥/超美，你怎麼知道！</label>
+            </div>
+            <div class="answer">
+                <input class="form-check-input" type="radio" name="Q5" value="soso">
+                <label class="form-check-label" for="defaultCheck1">才沒有勒，頂多就普普而已吧！</label>
+            </div>
+            <div class="answer">
+              <input class="form-check-input" type="radio" name="Q5" value="no">
+              <label class="form-check-label" for="defaultCheck1">不不不！他明明就超醜！</label>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="btn-page btn-prev">上一頁</div>
+          <div class="btn-page btn-next">下一頁</div>
+        </div>
+      </div>
+        <div class="card card4" id="cardend">
           <div class="card-body">
             <div class="title"><span>謝謝你的填寫</span></div>
             <div class="msg">
@@ -80,10 +119,26 @@
             </div>
           </div>
           <div class="card-footer">
-                <div class="btn btn-prev">上一頁</div>
-                <div class="btn btn-next btn-fin">完成</div>
+                <div class="btn-page btn-prev">上一頁</div>
+                <div class="btn-page btn-next btn-done">完成</div>
           </div>
         </div>
     </div>
+    <div class="progress">
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+      <div class="page"></div>
+    </div>
+</div>
+<div class="test-fin">
+  <div class="text">你已完成問卷<br>什麼？還想再測一次？！</div>
+  <div class="btn_wrap">
+    <div class="btn-page btn-redo">好啦再一次</div>
+    <div class="btn-page btn-fin">不用啦 結束吧</div>
+  </div>
+</div>
+<div class="thanks">
+  <div class="text">再次感謝您支持微暈的測驗：）</div>
 </div>
 <script src="js/test.js"></script>

@@ -4,7 +4,7 @@ $button:"pc" 450px/3*2,"pad" 45vh/3*2,"widephone" 66vw/3*2,"phone" 70vw/3*2;
 @each $device,$cover-size in $cover {
     .#{$device}-cover{
         width: $cover-size;
-        height: $cover-size*1.2;
+        height: $cover-size*1.15;
         .cover{
             background-size: $cover-size*.95;
         }
@@ -75,10 +75,18 @@ $button:"pc" 450px/3*2,"pad" 45vh/3*2,"widephone" 66vw/3*2,"phone" 70vw/3*2;
         margin: 0;
         padding: 0;
         .article_wrap{
-            position: absolute;
             width: 100%;
-            top: $nav-size+25px;
+            padding-top: $nav-size*1.2;
+            padding-bottom: $footer-size;
             z-index: 1;
+            @keyframes show {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
             .cover_wrap{
                 position: relative;
                 margin: 0 auto;
@@ -229,6 +237,33 @@ $button:"pc" 450px/3*2,"pad" 45vh/3*2,"widephone" 66vw/3*2,"phone" 70vw/3*2;
                 &:hover{
                     text-shadow: 1px 2px 10px rgba($color: $dark,$alpha: .5);
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width:1024px){
+    .container{
+        article{
+            .article_wrap{
+                padding-top: $nav-size*1.6;
+            }
+        }
+    }
+}
+@media screen and (max-width:767px) and (min-width:500px){
+    .container{
+        article{
+            .article_wrap{
+                padding-top: $nav-size*.9;
+            }
+        }
+    }
+}
+@media screen and (max-width:499px){
+    .container{
+        article{
+            .article_wrap{
+                padding-top: $nav-size*1.2;
             }
         }
     }

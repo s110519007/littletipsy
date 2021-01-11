@@ -459,6 +459,9 @@
   .container footer .design:active {
     opacity: .3;
   }
+  .container .article_wrap {
+    padding-bottom: 50px !important;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -471,6 +474,9 @@
   }
   .container footer .copyright {
     letter-spacing: -.5px;
+  }
+  .container .article_wrap {
+    padding-bottom: 50px !important;
   }
 }
 /*# sourceMappingURL=RWD.css.map */

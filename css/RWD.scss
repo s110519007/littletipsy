@@ -407,6 +407,9 @@
                 }
             }
         }
+        .article_wrap{
+            padding-bottom: $footer-size !important;
+        }
     }
 }
 //xs phone
@@ -426,6 +429,9 @@
             .copyright{
                 letter-spacing: -.5px;
             }
-        }    
+        } 
+        .article_wrap{
+            padding-bottom: $footer-size !important;
+        }
     }
 }

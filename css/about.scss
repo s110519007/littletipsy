@@ -1,0 +1,129 @@
+@import 'variables';
+$profile: "pc" 600px, "pad" 55vh, "phone" 80vw;
+@each $device,$profile-size in $profile {
+    .#{$device}-profile{
+        width: $profile-size;
+        .head{
+            width: $profile-size/3;
+            height: $profile-size/3;
+            .head-img{
+                width: 100%;
+                height: 100%;
+                transform: scale(.8);
+            }
+        }
+        .info{
+            width: $profile-size*.6;
+            .info-title{
+                font-size: 1em !important;
+            }
+            .info-text{
+                font-size: .8em !important;
+            }
+        }
+    }
+    .phone-profile{
+        flex-direction: column !important;
+        .head{
+            width: $profile-size/2;
+            height: $profile-size/2;
+            margin: 0 auto 10px !important;
+        }
+        .info{
+            width: $profile-size;
+            padding-left: 0 !important;
+            margin: 0 auto !important;
+        }
+    }
+}
+.container{
+    article{
+        .article_wrap{
+            .about{
+                margin: 0 auto;
+                z-index: 0;
+                .about-title{
+                    font-size: 1.2em;
+                    color: $light-pink;
+                    text-align: center;
+                }
+                .profile{
+                    margin: 0 auto;
+                    padding: 2% 0;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .head{
+                        margin: auto 0;
+                        border-radius: 100%;
+                        box-shadow: inset $shadow;
+                        background-color: $light;
+                        transition: $color-trans;
+                    }
+                    .info{
+                        text-align: left;
+                        padding-left: 15px;
+                        .info-title{
+                            font-size: .8em;
+                            margin-bottom: 10px;
+                        }
+                        .info-text{
+                            font-size: .6em;
+                            line-height: 1.5em;
+                        }
+                    }
+                    &:nth-child(even){
+                        color: $light-pink;
+                        border-bottom: 2px solid $lighter-pink;
+                        .info-title{
+                            color: $pink;
+                        }
+                    }
+                    &:nth-child(odd){
+                        color: $blue;
+                        border-bottom: 2px solid $light-blue;
+                        .info-title{
+                            color: $dark-blue;
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    &:nth-child(2) {
+                        .head{
+                            position: relative;
+                            .head-img{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background: url(../img/SVG/head_pink.svg) center no-repeat;
+                            }
+                        }
+                    }
+                    &:nth-child(3) {
+                        .head{
+                            position: relative;
+                            .head-img{
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                background: url(../img/SVG/head_blue.svg) center no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:767px){
+    #about{
+        padding-top: $nav-size*.7 !important;
+        padding-bottom: $footer-size !important;
+    }
+    .about{
+        .about-title{
+            margin: 20px 0;
+        }
+    }
+}

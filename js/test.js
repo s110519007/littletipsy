@@ -1,132 +1,134 @@
-// TweenMax.to("#icon1", 1, {
-//     rotation: 360,
-//     x: 250,
-//	   y: 250,
-//     opacity: 1,
-//     ease: Linear.easeNone
-// });
-
+var dx;
 $(document).ready(function() {
+	$(window).resize(function () { 
+		contentResize();
+	});
+	contentResize();
 	var cardnum=document.getElementsByClassName('card').length;
-	console.log(cardnum);
 	for (let num = 2; num <= cardnum; num++) {
 		TweenMax.to(".card"+num, 0, {
-			x: 600,
+			x: dx,
 			ease: Linear.easeNone
 		});
 	}
-	TweenMax.to(".progress-bar", 0, {
-	    width: 100,
-	    ease: Linear.easeNone
-	});
-
-
-	$('.card1 .btn-next').click(function(event) {
-		turnNext(1);
-		$('.progress-bar').css({
-			background: 'linear-gradient(to right, #f9d4f4 60%,#dbffff)'
+	for (let next = 1; next < cardnum; next++) {
+		$('.card'+next+' .btn-next').click(function(event) {
+			turnNext(next);
 		});
-	});
-	$('.card2 .btn-next').click(function(event) {
-		turnNext(2);
-		$('.progress-bar').css({
-			background: 'linear-gradient(to right, #f9d4f4 70%,#dbffff)'
+	}
+	for (let prev = 2; prev <= cardnum; prev++) {
+		$('.card'+prev+' .btn-prev').click(function(event) {
+			turnPrev(prev);
 		});
-	});
-	$('.card2 .btn-prev').click(function(event) {
-		turnPrev(2);
-		$('.progress-bar').css({
-			background: 'linear-gradient(to right, #f9d4f4 50%,#dbffff)'
-		});
-	});
-	$('.card3 .btn-prev').click(function(event) {
-		turnPrev(3);
-		$('.progress-bar').css({
-			background: 'linear-gradient(to right, #f9d4f4 60%,#dbffff)'
-		});
-	});
-	$(".btn-fin").click(function(event) {
+	}
+	$(".btn-done").click(function(event) {
 		save();
 	});
+	$(".btn-redo").click(function(event) {
+		for (let num = cardnum; num > 1; num--) {
+			turnPrev(num);
+		}
+		$(".test").fadeIn();
+		$(".test-fin").fadeOut();
+	});
+	$(".btn-fin").click(function(event) {
+		$(".thanks").fadeIn();
+		$(".test-fin").fadeOut();
+	});
+	
+	for (let page = 1; page <= cardnum; page++) {
+		$('.page:nth-child('+page+')').click(function () { 
+			if (page>=2) {
+				for (let num = 2; num <= page; num++) {
+					turnNext(num-1);
+				}
+			}
+			for (let num = cardnum; num > page; num--) {
+				turnPrev(num);
+			}
+		});
+	}
 });
 
 function turnNext(n){
-	TweenMax.to(".progress-bar", 0, {
-	    width: 100*(n+1),
-	    ease: Linear.easeNone
-	});
 	TweenMax.to(".card"+n, 0.5, {
-	    x: -600,
-	    ease: Linear.easeNone
+	    x: '-'+dx,
+		ease: Linear.easeNone
 	});
 	TweenMax.to(".card"+(n+1), 0.5, {
 	    x: 0,
 	    ease: Linear.easeNone
 	});
+	$('.page:nth-child('+n+')').addClass('page-focus');
 }
 
 function turnPrev(n){
-	TweenMax.to(".progress-bar", 0, {
-	    width: 100*(n-1),
-	    ease: Linear.easeNone
-	});
 	TweenMax.to(".card"+n, 0.5, {
-	    x: 600,
+	    x: dx,
 	    ease: Linear.easeNone
 	});
 	TweenMax.to(".card"+(n-1), 0.5, {
 	    x: 0,
 	    ease: Linear.easeNone
 	});
+	$('.page:nth-child('+(n-1)+')').removeClass('page-focus');
 }
 
 function save() {
-	let postURL ="https://script.google.com/macros/s/AKfycbzYOCiISQj6XIXCfGZq-FvXlrvnSXh1IwE8osbgmZ8LZy6d5Gw/exec";
+	let postURL ="https://script.google.com/macros/s/AKfycbyv4oc1z8-XTXRDvtYR8QMhOHEqVzlCiptHrQGWof52zKFanS2zCpKQ/exec";
 	let parameter = new Object();
 	parameter.method ="write";
-	// var s1 = [];
-	// var s2 = [];
-	// var s3, s4;
-	// var oc;
-	// $("input[name ='type']:checkbox:checked").each(function() {
-	// 	s1.push($(this).val());
-	// });
-	// s1 = s1.join();
-	// $("input[name ='add']:checkbox:checked").each(function() {
-	// 	s2.push($(this).val());
-	// });
-	// s2 = s2.join();
+	var a1,a2,a3,a4,a5;
+	a1 = $("input[name='Q1']:radio:checked").val();
+	a2 = $("input[name='Q2']:radio:checked").val();
+	a3 = $("input[name='Q3']:radio:checked").val();
+	a4 = $("input[name='Q4']:radio:checked").val();
+	a5 = $("input[name='Q5']:radio:checked").val();
 
-	// oc = $("input[name ='other']:checkbox:checked")
-	// if (oc) {
-	// 	s2 = s2 + $("input[type ='text']").val();
-	// }
-	
-	// s3 = $("input[name ='sweet']:radio:checked").val();
-	// s4 = $("input[name ='ice']:radio:checked").val();
-
-	// parameter.type = s1;
-	// parameter.add = s2;
-	// parameter.sweet = s3;
-	// parameter.ice = s4;
-	// parameter.email = $("input[type ='email']").val();
-	var A1,A2,A3;
-	A1 = $("input[name ='Q1']:radio:checked").val();
-	A2 = $("input[name ='Q2']:radio:checked").val();
-	A3 = $("input[name ='Q3']:radio:checked").val();
-
-	parameter.A1 = A1;
-	parameter.A2 = A2;
-	parameter.A3 = A3;
-	parameter.msg = $(".message").val();
+	parameter.a1 = a1;
+	parameter.a2 = a2;
+	parameter.a3 = a3;
+	parameter.a4 = a4;
+	parameter.a5 = a5;
+	parameter.msg = $("textarea[name='msg']").val();
 	parameter.sheetUrl = "https://docs.google.com/spreadsheets/d/1kDR7z3OJN1AKVpcqhY8-x-_bJplmgM2EtQB0U1A13MA/edit#gid=0";
 	parameter.sheetTag = "工作表1";
 	$.post(postURL, parameter, function(data) {
 		if (data.result == "success") {
-			alert("成功寫入");
-			read();
+			// alert("成功寫入");
+			$(".test").fadeOut();
+			$(".test-fin").fadeIn();
+			// read();
 		}else{
 			alert("失敗");
 		}
 	});
+}
+//內容rwd
+function contentResize() {
+    var w =$(window).width();
+    if (w>1024) {
+		dx = 600;
+        $('.test').addClass('pc-test');
+		$('.test').removeClass('pad-test phone-test');
+		$('.btn-page').addClass('pc-page');
+		$('.btn-page').removeClass('pad-page phone-page');
+		$('.page').addClass('page-hover');
+    }
+    else if((w<=1024)&&(w>=768)) {
+		dx = '60vh';
+        $('.test').addClass('pad-test');
+		$('.test').removeClass('pc-test phone-test');
+		$('.btn-page').addClass('pad-page');
+        $('.btn-page').removeClass('pc-page phone-page');
+		$('.page').removeClass('page-hover');
+    }
+    else{
+		dx = '80vw';
+        $('.test').addClass('phone-test');
+		$('.test').removeClass('pc-test pad-test');
+		$('.btn-page').addClass('phone-page');
+        $('.btn-page').removeClass('pc-page pad-page');
+		$('.page').removeClass('page-hover');
+    }
 }
