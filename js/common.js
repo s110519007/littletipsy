@@ -134,7 +134,7 @@ function navClick() {
     $('.ham').removeClass('ham_open');
     $('.nav-link_wrap').fadeOut();
     $('.nav-cover').fadeOut();
-    $('.nav-link_wrap').css('display','flex');
+    $('.nav-link_wrap').css('display','none');
 }
 function clearFocus() {
     $('.nav-link').removeClass('bg-dark');
