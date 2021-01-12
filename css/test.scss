@@ -148,8 +148,8 @@ $page-btn:"pc" 20%, "pad" 30%, "phone" 35%;
                             }
                         }
                         .btn-done_click{
-                            pointer-events: none;
-                            background-color: $lighter-pink;
+                            pointer-events: none !important;
+                            background-color: $lighter-pink !important;
                         }
                     }
                 }

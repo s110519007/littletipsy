@@ -210,8 +210,8 @@
 }
 
 .container article .article_wrap .test .card .card-footer .btn-done_click {
-  pointer-events: none;
-  background-color: #ffedf1;
+  pointer-events: none !important;
+  background-color: #ffedf1 !important;
 }
 
 .container article .article_wrap .test .progress {
