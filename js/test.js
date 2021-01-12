@@ -1,9 +1,30 @@
 var dx;
 $(document).ready(function() {
+	var cardnum=document.getElementsByClassName('card').length;
+	for (let card = 1; card <= cardnum; card++) {
+		$('.card:nth-child('+card+')').addClass('card'+card);
+		var page = document.createElement('div');
+		page.className = "page";
+		$('.progress').append(page);
+		$('.page:nth-child('+card+')').click(function () { 
+			if (card>=2) {
+				for (let num = 2; num <= card; num++) {
+					turnNext(num-1);
+				}
+			}
+			for (let num = cardnum; num > card; num--) {
+				turnPrev(num);
+			}
+		});
+	}
 	$(window).resize(function () { 
 		contentResize();
+		testContent();
 	});
 	contentResize();
+	testContent();
+});
+function testContent() {
 	var cardnum=document.getElementsByClassName('card').length;
 	for (let num = 2; num <= cardnum; num++) {
 		TweenMax.to(".card"+num, 0, {
@@ -22,9 +43,11 @@ $(document).ready(function() {
 		});
 	}
 	$(".btn-done").click(function(event) {
+		$(".btn-done").addClass('btn-done_click');
 		save();
 	});
 	$(".btn-redo").click(function(event) {
+		$(".btn-done").removeClass('btn-done_click');
 		for (let num = cardnum; num > 1; num--) {
 			turnPrev(num);
 		}
@@ -35,21 +58,7 @@ $(document).ready(function() {
 		$(".thanks").fadeIn();
 		$(".test-fin").fadeOut();
 	});
-	
-	for (let page = 1; page <= cardnum; page++) {
-		$('.page:nth-child('+page+')').click(function () { 
-			if (page>=2) {
-				for (let num = 2; num <= page; num++) {
-					turnNext(num-1);
-				}
-			}
-			for (let num = cardnum; num > page; num--) {
-				turnPrev(num);
-			}
-		});
-	}
-});
-
+}
 function turnNext(n){
 	TweenMax.to(".card"+n, 0.5, {
 	    x: '-'+dx,
@@ -124,7 +133,7 @@ function contentResize() {
 		$('.page').removeClass('page-hover');
     }
     else{
-		dx = '80vw';
+		dx = '85vw';
         $('.test').addClass('phone-test');
 		$('.test').removeClass('pc-test pad-test');
 		$('.btn-page').addClass('phone-page');

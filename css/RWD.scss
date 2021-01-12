@@ -194,6 +194,7 @@
                 background-color: $light-pink;
                 border-radius: 80% 0 0 80%/50% 0 0 50%;
                 flex-direction: column;
+                justify-content: center;
                 &::after{
                     content: '';
                     position: absolute;
@@ -214,9 +215,6 @@
                     font-size: 1em;
                     border-radius: 40px/50%;
                     outline: none;
-                    &:nth-child(1){
-                        margin-top: 80%;
-                    }
                 }
             }
             .nav-cover{
@@ -356,15 +354,12 @@
                 }
                 .nav-link{
                     width: 50%;
-                    margin: 20px auto;
+                    margin: 10px auto;
                     margin-right: 20px;
                     padding: 10px 15px;
                     font-size: 1em;
                     border-radius: 20px/50%;
                     outline: none;
-                    &:nth-child(1){
-                        margin-top: 35vh;
-                    }
                 }
             }
             .nav-cover{
@@ -388,7 +383,7 @@
                     line-height: $footer-size;
                 }
                 .W{
-                    margin-right: 78vw;
+                    margin-right: 80vw;
                 }
             }
             .copyright{
