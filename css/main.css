@@ -605,7 +605,7 @@
 
 @media screen and (max-width: 499px) {
   .container article .article_wrap {
-    padding-top: 156px;
+    padding-top: 50%;
   }
 }
 /*# sourceMappingURL=main.css.map */
