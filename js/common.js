@@ -144,6 +144,7 @@ function clearFocus() {
 function commonResize() {
     var w =$(window).width();
     if (w>1024) {
+        $('.ham').removeClass('ham_close');
         //common
         $('.circle').addClass('pc');
         $('.circle').removeClass('pad phone');
