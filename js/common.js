@@ -79,12 +79,10 @@ $(document).ready(function () {
         } else {
             $('.focus').addClass('bg-dark');
         }
-        $(window).resize(function () { 
-            var w =$(window).width();
-            if (w<=1024) {
-                navClick();
-            }
-        });
+        var w =$(window).width();
+        if (w<=1024) {
+            navClick();
+        }
         ham=false;
     });
     $('.logo').click(function () { 
