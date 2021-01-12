@@ -48,6 +48,12 @@ $(document).ready(function () {
             $('.nav-link_wrap').css('display','flex');
             $('.nav-link_wrap').fadeIn();
             $('.nav-cover').fadeIn();
+            $(window).resize(function () { 
+                var w =$(window).width();
+                if (w>1024) {
+                    $('.nav-link_wrap').css('display','flex');
+                }
+            });
             ham=true;
         } else {
             $('.ham').removeClass('ham_open');
@@ -141,7 +147,6 @@ function clearFocus() {
 function commonResize() {
     var w =$(window).width();
     if (w>1024) {
-        $('.ham').removeClass('ham_close');
         //common
         $('.circle').addClass('pc');
         $('.circle').removeClass('pad phone');
