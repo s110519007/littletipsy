@@ -80,7 +80,11 @@ $(document).ready(function () {
             $('.focus').addClass('bg-dark');
         }
         var w =$(window).width();
-        if (w<=1024) {
+        if (w>1024) {
+            $('.nav-link_wrap').show();
+            $('.nav-link_wrap').css('display','flex');
+        }
+        else{
             navClick();
         }
         ham=false;
