@@ -60,7 +60,7 @@ $(document).ready(function () {
             $('.ham').addClass('ham_close');
             $('.nav-link_wrap').fadeOut();
             $('.nav-cover').fadeOut();
-            $('.nav-link_wrap').css('display','flex');
+            $('.nav-link_wrap').css('display','none');
             $(window).resize(function () { 
                 var w =$(window).width();
                 if (w>1024) {
