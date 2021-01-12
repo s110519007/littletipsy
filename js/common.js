@@ -45,26 +45,23 @@ $(document).ready(function () {
         if (ham==false) {
             $('.ham').removeClass('ham_close');
             $('.ham').addClass('ham_open');
+            $('.nav-link_wrap').css('display','flex');
             $('.nav-link_wrap').fadeIn();
             $('.nav-cover').fadeIn();
-            $('.nav-link_wrap').css('display','flex');
+            ham=true;
+        } else {
+            $('.ham').removeClass('ham_open');
+            $('.ham').addClass('ham_close');
+            $('.nav-link_wrap').css('display','none');
+            $('.nav-link_wrap').fadeOut();
+            $('.nav-cover').fadeOut();
             $(window).resize(function () { 
                 var w =$(window).width();
                 if (w>1024) {
                     $('.nav-link_wrap').css('display','flex');
                 }
-            });
-            ham=true;
-        } else {
-            $('.ham').removeClass('ham_open');
-            $('.ham').addClass('ham_close');
-            $('.nav-link_wrap').fadeOut();
-            $('.nav-cover').fadeOut();
-            $('.nav-link_wrap').css('display','none');
-            $(window).resize(function () { 
-                var w =$(window).width();
-                if (w>1024) {
-                    $('.nav-link_wrap').css('display','flex');
+                else{
+                    $('.nav-link_wrap').css('display','none');
                 }
             });
             ham=false;
