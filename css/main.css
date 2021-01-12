@@ -531,7 +531,7 @@
   border-radius: 30%/100%;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
           box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+  overflow: hidden !important;
   -webkit-transition: text-shadow .3s;
   transition: text-shadow .3s;
 }
