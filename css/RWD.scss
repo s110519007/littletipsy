@@ -166,13 +166,15 @@
                 }
             }
             .logo{
-                &:hover{
-                    background-size: 150px;
-                    box-shadow: none;
-                }
                 &:active{
                     background-size: 1.1*150px;
                     box-shadow: inset -5px 10px 5px rgba($color: #000, $alpha: .2);
+                }
+            }
+            .logo-hover{
+                &:hover{
+                    background-size: 150px;
+                    box-shadow: none;
                 }
             }
             .mode{

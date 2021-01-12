@@ -150,6 +150,7 @@ function commonResize() {
         //common
         $('.circle').addClass('pc');
         $('.circle').removeClass('pad phone');
+        $('.logo').addClass('logo-hover');
         //index
         $('.cover_wrap').addClass('pc-cover');
         $('.cover_wrap').removeClass('pad-cover phone-cover widephone-cover');
@@ -163,6 +164,7 @@ function commonResize() {
         //common
         $('.circle').addClass('pad');
         $('.circle').removeClass('pc phone');
+        $('.logo').removeClass('logo-hover');
         //index
         $('.cover_wrap').addClass('pad-cover');
         $('.cover_wrap').removeClass('pc-cover phone-cover widephone-cover');
@@ -176,6 +178,7 @@ function commonResize() {
         //common
         $('.circle').addClass('phone');
         $('.circle').removeClass('pc pad');
+        $('.logo').removeClass('logo-hover');
         //index
         $('.cover_wrap').addClass('widephone-cover');
         $('.cover_wrap').removeClass('pc-cover pad-cover phone-cover');
@@ -189,6 +192,7 @@ function commonResize() {
         //common
         $('.circle').addClass('phone');
         $('.circle').removeClass('pc pad');
+        $('.logo').removeClass('logo-hover');
         //index
         $('.cover_wrap').addClass('phone-cover');
         $('.cover_wrap').removeClass('pc-cover pad-cover widephone-cover');

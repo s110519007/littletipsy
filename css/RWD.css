@@ -215,15 +215,15 @@
               transform: translateY(120%) rotate(-45deg);
     }
   }
-  .container nav .logo:hover {
-    background-size: 150px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
   .container nav .logo:active {
     background-size: 165px;
     -webkit-box-shadow: inset -5px 10px 5px rgba(0, 0, 0, 0.2);
             box-shadow: inset -5px 10px 5px rgba(0, 0, 0, 0.2);
+  }
+  .container nav .logo-hover:hover {
+    background-size: 150px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   .container nav .mode:hover {
     opacity: .5;
