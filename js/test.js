@@ -19,7 +19,6 @@ $(document).ready(function() {
 	}
 	$(window).resize(function () { 
 		contentResize();
-		testContent();
 	});
 	contentResize();
 	testContent();
