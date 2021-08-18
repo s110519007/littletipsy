@@ -93,12 +93,12 @@
 }
 
 .phone-profile {
-  width: 80vw;
+  width: 75vw;
 }
 
 .phone-profile .head {
-  width: 26.66667vw;
-  height: 26.66667vw;
+  width: 25vw;
+  height: 25vw;
 }
 
 .phone-profile .head .head-img {
@@ -109,7 +109,7 @@
 }
 
 .phone-profile .info {
-  width: 48vw;
+  width: 45vw;
 }
 
 .phone-profile .info .info-title {
@@ -128,29 +128,34 @@
 }
 
 .phone-profile .head {
-  width: 40vw;
-  height: 40vw;
+  width: 37.5vw;
+  height: 37.5vw;
   margin: 0 auto 10px !important;
 }
 
 .phone-profile .info {
-  width: 80vw;
+  width: 75vw;
   padding-left: 0 !important;
   margin: 0 auto !important;
 }
 
-.container article .article_wrap .about {
+.container .about_wrap {
+  margin: 20px 0;
+  position: relative;
+}
+
+.container .about_wrap .about {
   margin: 0 auto;
   z-index: 0;
 }
 
-.container article .article_wrap .about .about-title {
-  font-size: 1.2em;
+.container .about_wrap .about .about-title {
+  font-size: 1em;
   color: #ffc5d4;
   text-align: center;
 }
 
-.container article .article_wrap .about .profile {
+.container .about_wrap .about .profile {
   margin: 0 auto;
   padding: 2% 0;
   display: -webkit-box;
@@ -165,7 +170,7 @@
           justify-content: space-between;
 }
 
-.container article .article_wrap .about .profile .head {
+.container .about_wrap .about .profile .head {
   margin: auto 0;
   border-radius: 100%;
   -webkit-box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -175,59 +180,59 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.container article .article_wrap .about .profile .info {
+.container .about_wrap .about .profile .info {
   text-align: left;
   padding-left: 15px;
 }
 
-.container article .article_wrap .about .profile .info .info-title {
-  font-size: .8em;
+.container .about_wrap .about .profile .info .info-title {
+  font-size: .6em;
   margin-bottom: 10px;
 }
 
-.container article .article_wrap .about .profile .info .info-text {
-  font-size: .6em;
+.container .about_wrap .about .profile .info .info-text li {
+  font-size: .8em;
   line-height: 1.5em;
 }
 
-.container article .article_wrap .about .profile:nth-child(even) {
+.container .about_wrap .about .profile:nth-child(even) {
   color: #ffc5d4;
   border-bottom: 2px solid #ffedf1;
 }
 
-.container article .article_wrap .about .profile:nth-child(even) .info-title {
+.container .about_wrap .about .profile:nth-child(even) .info-title {
   color: #ffa6b9;
 }
 
-.container article .article_wrap .about .profile:nth-child(odd) {
+.container .about_wrap .about .profile:nth-child(odd) {
   color: #a9deff;
   border-bottom: 2px solid #d3eeff;
 }
 
-.container article .article_wrap .about .profile:nth-child(odd) .info-title {
+.container .about_wrap .about .profile:nth-child(odd) .info-title {
   color: #76caff;
 }
 
-.container article .article_wrap .about .profile:last-child {
+.container .about_wrap .about .profile:last-child {
   border-bottom: none;
 }
 
-.container article .article_wrap .about .profile:nth-child(2) .head {
+.container .about_wrap .about .profile:nth-child(2) .head {
   position: relative;
 }
 
-.container article .article_wrap .about .profile:nth-child(2) .head .head-img {
+.container .about_wrap .about .profile:nth-child(2) .head .head-img {
   position: absolute;
   top: 0;
   left: 0;
   background: url(../img/SVG/head_pink.svg) center no-repeat;
 }
 
-.container article .article_wrap .about .profile:nth-child(3) .head {
+.container .about_wrap .about .profile:nth-child(3) .head {
   position: relative;
 }
 
-.container article .article_wrap .about .profile:nth-child(3) .head .head-img {
+.container .about_wrap .about .profile:nth-child(3) .head .head-img {
   position: absolute;
   top: 0;
   left: 0;
@@ -236,8 +241,7 @@
 
 @media screen and (max-width: 767px) {
   #about {
-    padding-top: 91px !important;
-    padding-bottom: 80px !important;
+    padding-top: 42px !important;
   }
   .about .about-title {
     margin: 20px 0;

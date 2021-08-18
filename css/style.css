@@ -37,7 +37,7 @@ body {
   color: #fff;
   font-family: 'Microsoft JhengHei';
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
   text-align: center;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
@@ -371,7 +371,7 @@ textarea::placeholder {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: 60px;
   background: linear-gradient(135deg, #ffc5d4, 75%, #a9deff);
   z-index: 10;
   overflow: hidden;
@@ -380,14 +380,14 @@ textarea::placeholder {
 .container nav .logo {
   cursor: pointer;
   margin-left: 7.5%;
-  margin-top: -30px;
-  width: 190px;
-  height: 190px;
+  margin-top: -20px;
+  width: 100px;
+  height: 100px;
   background-color: #fff;
   border-radius: 100%;
   background-image: url(../img/SVG/logo.svg);
   background-repeat: no-repeat;
-  background-size: 150px;
+  background-size: 75px;
   background-position: center;
   -webkit-transition: background-color 0.3s, color 0.3s, background-size 0.3s, -webkit-box-shadow 0.3s;
   transition: background-color 0.3s, color 0.3s, background-size 0.3s, -webkit-box-shadow 0.3s;
@@ -396,7 +396,7 @@ textarea::placeholder {
 }
 
 .container nav .logo:hover {
-  background-size: 165px;
+  background-size: 82.5px;
   -webkit-box-shadow: inset -5px 10px 5px rgba(0, 0, 0, 0.2);
           box-shadow: inset -5px 10px 5px rgba(0, 0, 0, 0.2);
 }
@@ -404,10 +404,10 @@ textarea::placeholder {
 .container nav .mode {
   cursor: pointer;
   margin-left: 1%;
-  margin-top: 130px;
+  margin-top: 60px;
   -webkit-transform: translateY(-1.6em);
           transform: translateY(-1.6em);
-  font-size: 0.6em;
+  font-size: 0.5em;
   opacity: .5;
   -webkit-transition: opacity .3s;
   transition: opacity .3s;
@@ -435,9 +435,9 @@ textarea::placeholder {
 .container nav .nav-link_wrap .nav-link {
   cursor: pointer;
   margin: auto 20px;
-  padding: 15px 40px;
-  font-size: 1em;
-  border-radius: 40px/50%;
+  padding: 8px 30px;
+  font-size: 0.6em;
+  border-radius: 20px/50%;
   outline: none;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
@@ -462,19 +462,18 @@ textarea::placeholder {
   display: none;
 }
 
-.container footer {
-  position: absolute;
+footer {
+  position: relative;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 60px;
   background: linear-gradient(135deg, #ffc5d4, 75%, #a9deff);
   overflow: hidden;
   z-index: 5;
 }
 
-.container footer .WB {
+footer .WB {
   cursor: default;
-  height: 100%;
   width: 100%;
   position: absolute;
   left: 50%;
@@ -482,26 +481,26 @@ textarea::placeholder {
           transform: translateX(-50%);
 }
 
-.container footer .WB span {
+footer .WB span {
   font-size: 1.2em;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
   opacity: .5;
 }
 
-.container footer .WB .W {
+footer .WB .W {
   margin-right: 400px;
 }
 
-.container footer .copyright {
+footer .copyright {
   margin: auto;
   width: 100%;
   font-size: .4em;
-  line-height: 40px;
+  line-height: 30px;
   font-weight: normal;
 }
 
-.container footer .design {
+footer .design {
   cursor: default;
   position: absolute;
   bottom: 3px;
@@ -513,7 +512,7 @@ textarea::placeholder {
   transition: opacity .3s;
 }
 
-.container footer .design:hover {
+footer .design:hover {
   opacity: .6;
 }
 /*# sourceMappingURL=style.css.map */

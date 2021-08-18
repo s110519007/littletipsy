@@ -1,7 +1,7 @@
 .pc-test {
-  width: 600px;
+  width: 550px;
   height: auto;
-  height: 630px;
+  height: 577.5px;
 }
 
 .phone-test {
@@ -40,7 +40,7 @@
   width: 35%;
 }
 
-.container article .article_wrap .test {
+.container .article_wrap .test {
   position: relative;
   margin: 0 auto 30px;
   -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -54,73 +54,73 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 
-.container article .article_wrap .test .card {
+.container .article_wrap .test .card {
   position: absolute;
   width: 100%;
   height: 100%;
   padding: 20px 0;
 }
 
-.container article .article_wrap .test .card .card-body .title {
+.container .article_wrap .test .card .card-body .title {
   color: #a9deff;
 }
 
-.container article .article_wrap .test .card .card-body .title span {
+.container .article_wrap .test .card .card-body .title span {
   color: #ffc5d4;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(even) {
+.container .article_wrap .test .card .card-body .question:nth-child(even) {
   color: #ffa6b9;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(even) .answer {
+.container .article_wrap .test .card .card-body .question:nth-child(even) .answer {
   color: #ffc5d4;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(even) .answer input[type=radio] {
+.container .article_wrap .test .card .card-body .question:nth-child(even) .answer input[type=radio] {
   border: 2px solid #ffc5d4;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(even) .answer input:checked {
+.container .article_wrap .test .card .card-body .question:nth-child(even) .answer input:checked {
   background: url(../img/SVG/heart_pink.svg) center no-repeat;
   background-size: 85%;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(odd) {
+.container .article_wrap .test .card .card-body .question:nth-child(odd) {
   color: #76caff;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(odd) .answer {
+.container .article_wrap .test .card .card-body .question:nth-child(odd) .answer {
   color: #a9deff;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(odd) .answer input[type=radio] {
+.container .article_wrap .test .card .card-body .question:nth-child(odd) .answer input[type=radio] {
   border: 2px solid #a9deff;
 }
 
-.container article .article_wrap .test .card .card-body .question:nth-child(odd) .answer input:checked {
+.container .article_wrap .test .card .card-body .question:nth-child(odd) .answer input:checked {
   background: url(../img/SVG/heart_blue.svg) center no-repeat;
   background-size: 85%;
 }
 
-.container article .article_wrap .test .card .card-body .question {
+.container .article_wrap .test .card .card-body .question {
   margin: 20px 40px 20px 15%;
   font-size: .8em;
   text-align: left;
 }
 
-.container article .article_wrap .test .card .card-body .question .answer {
+.container .article_wrap .test .card .card-body .question .answer {
   width: 100%;
   margin: 0 auto;
   margin-left: -2%;
   font-size: .9em;
 }
 
-.container article .article_wrap .test .card .card-body .question .answer:nth-child(2) {
+.container .article_wrap .test .card .card-body .question .answer:nth-child(2) {
   margin-top: 5px;
 }
 
-.container article .article_wrap .test .card .card-body .question .answer input[type=radio] {
+.container .article_wrap .test .card .card-body .question .answer input[type=radio] {
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -132,18 +132,17 @@
   transition: transform .3s, -webkit-transform .3s;
 }
 
-.container article .article_wrap .test .card .card-body .question .answer input[type=radio]:active, .container article .article_wrap .test .card .card-body .question .answer input[type=radio]:hover {
+.container .article_wrap .test .card .card-body .question .answer input[type=radio]:active, .container .article_wrap .test .card .card-body .question .answer input[type=radio]:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-.container article .article_wrap .test .card .card-body .msg {
-  margin-top: 20px;
+.container .article_wrap .test .card .card-body .msg {
   color: #a9deff;
-  font-size: .8em;
+  font-size: .6em;
 }
 
-.container article .article_wrap .test .card .card-body .msg .message {
+.container .article_wrap .test .card .card-body .msg .message {
   margin-top: 20px;
   padding: 15px;
   width: 80%;
@@ -155,7 +154,7 @@
           box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.container article .article_wrap .test .card .card-footer {
+.container .article_wrap .test .card .card-footer {
   width: 100%;
   position: absolute;
   bottom: 15%;
@@ -171,7 +170,7 @@
           justify-content: center;
 }
 
-.container article .article_wrap .test .card .card-footer .btn-page {
+.container .article_wrap .test .card .card-footer .btn-page {
   cursor: pointer;
   display: inline-block;
   margin: 0 10px;
@@ -185,36 +184,36 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.container article .article_wrap .test .card .card-footer .btn-page:hover {
+.container .article_wrap .test .card .card-footer .btn-page:hover {
   text-shadow: 1px 2px 10px rgba(255, 255, 255, 0.8);
 }
 
-.container article .article_wrap .test .card .card-footer .btn-prev {
+.container .article_wrap .test .card .card-footer .btn-prev {
   background-color: #a9deff;
 }
 
-.container article .article_wrap .test .card .card-footer .btn-prev:hover {
+.container .article_wrap .test .card .card-footer .btn-prev:hover {
   background-color: #76caff;
 }
 
-.container article .article_wrap .test .card .card-footer .btn-next {
+.container .article_wrap .test .card .card-footer .btn-next {
   background-color: #ffc5d4;
 }
 
-.container article .article_wrap .test .card .card-footer .btn-next:hover {
+.container .article_wrap .test .card .card-footer .btn-next:hover {
   background-color: #ffa6b9;
 }
 
-.container article .article_wrap .test .card .card-footer .text-dark:hover {
+.container .article_wrap .test .card .card-footer .text-dark:hover {
   text-shadow: 1px 2px 10px rgba(58, 58, 58, 0.5);
 }
 
-.container article .article_wrap .test .card .card-footer .btn-done_click {
+.container .article_wrap .test .card .card-footer .btn-done_click {
   pointer-events: none !important;
   background-color: #ffedf1 !important;
 }
 
-.container article .article_wrap .test .progress {
+.container .article_wrap .test .progress {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -227,7 +226,7 @@
   height: 50px;
 }
 
-.container article .article_wrap .test .progress .page {
+.container .article_wrap .test .progress .page {
   cursor: pointer;
   margin: auto 10px;
   width: 20px;
@@ -240,39 +239,36 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-.container article .article_wrap .test .progress .page:active {
+.container .article_wrap .test .progress .page:active {
   background-color: #ffc5d4;
 }
 
-.container article .article_wrap .test .progress .page-focus {
+.container .article_wrap .test .progress .page-focus {
   background-color: #ffa6b9;
 }
 
-.container article .article_wrap .test .progress .page-hover:hover {
+.container .article_wrap .test .progress .page-hover:hover {
   background-color: #ffc5d4 !important;
 }
 
-.container article .article_wrap .test-dark {
+.container .article_wrap .test-dark {
   background-color: rgba(58, 58, 58, 0.5) !important;
 }
 
-.container article .article_wrap .test-fin, .container article .article_wrap .thanks {
+.container .article_wrap .test-fin, .container .article_wrap .thanks {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   font-size: 1em;
   color: #ffc5d4;
 }
 
-.container article .article_wrap .test-fin .text, .container article .article_wrap .thanks .text {
-  margin: 40vh 0 30px;
+.container .article_wrap .test-fin .text, .container .article_wrap .thanks .text {
+  margin-bottom: 30px;
   width: 100%;
 }
 
-.container article .article_wrap .test-fin .btn_wrap, .container article .article_wrap .thanks .btn_wrap {
+.container .article_wrap .test-fin .btn_wrap, .container .article_wrap .thanks .btn_wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,7 +278,7 @@
           justify-content: center;
 }
 
-.container article .article_wrap .test-fin .btn_wrap .btn-page, .container article .article_wrap .thanks .btn_wrap .btn-page {
+.container .article_wrap .test-fin .btn_wrap .btn-page, .container .article_wrap .thanks .btn_wrap .btn-page {
   cursor: pointer;
   width: auto;
   margin: 0 10px;
@@ -297,25 +293,21 @@
   background-color: #ffc5d4;
 }
 
-.container article .article_wrap .test-fin .btn_wrap .btn-page:hover, .container article .article_wrap .thanks .btn_wrap .btn-page:hover {
+.container .article_wrap .test-fin .btn_wrap .btn-page:hover, .container .article_wrap .thanks .btn_wrap .btn-page:hover {
   text-shadow: 1px 2px 10px rgba(255, 255, 255, 0.8);
 }
 
-.container article .article_wrap .test-fin .btn_wrap .btn-fin, .container article .article_wrap .thanks .btn_wrap .btn-fin {
+.container .article_wrap .test-fin .btn_wrap .btn-fin, .container .article_wrap .thanks .btn_wrap .btn-fin {
   background-color: #a9deff;
 }
 
-.container article .article_wrap .test-fin .btn_wrap .text-dark:hover, .container article .article_wrap .thanks .btn_wrap .text-dark:hover {
+.container .article_wrap .test-fin .btn_wrap .text-dark:hover, .container .article_wrap .thanks .btn_wrap .text-dark:hover {
   text-shadow: 1px 2px 10px rgba(58, 58, 58, 0.5);
-}
-
-.container article .article_wrap .thanks .text {
-  margin-top: 50vh;
 }
 
 @media screen and (max-width: 767px) {
   #test {
-    padding-top: 91px !important;
+    padding-top: 42px !important;
   }
   .card {
     padding: 10px 0 !important;
